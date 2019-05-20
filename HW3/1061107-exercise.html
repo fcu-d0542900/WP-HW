@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>Temperature</title>
+    <script type = "text/javascript">
+        document.writeln("<h1>攝氏華氏溫度轉換</h1>");
+        var ch = window.prompt("1.攝氏轉華氏 2.華氏轉攝氏: ");
+        var celsius,fahrenheit;
+        switch(ch)
+        {
+            case "1":
+                celsius = window.prompt("輸入攝氏: ");
+                document.writeln("<p>攝氏溫度: " + celsius+ "度</p>");
+                document.writeln("<p>華氏溫度: " + CtoF(celsius).toFixed(2) + "度</p>");
+                break;
+            case "2":
+                fahrenheit = window.prompt("輸入華氏: ");
+                document.writeln("<p>華氏溫度: " + fahrenheit + "度</p>");
+                document.writeln("<p>攝氏溫度: " + FtoC(fahrenheit).toFixed(2) + "度</p>");
+                break;
+            default:
+                document.writeln("<p>輸入錯誤，請重新輸入!</p>");
+                break;
+        }
+        
+        function CtoF(celsius)
+        {
+            return celsius*9/5+32;
+        }
+        function FtoC(fahrenheit)
+        {
+            return (fahrenheit-32)*5/9;
+        }
+    </script>
+</head>
+</html>
